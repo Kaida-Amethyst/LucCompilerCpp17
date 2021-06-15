@@ -7,35 +7,32 @@
 #include <iostream>
 
 luaTable::luaTable(int nArr, int nRec) {
-    if (nArr > 0) {
-        arr = std::make_unique<std::vector<luaValue>>(nArr);
-    }else{
-        arr = std::make_unique<std::vector<luaValue>>();
-    }
-    _map = std::make_unique<std::unordered_map<luaValue, luaValue>>();
+    arr = nArr > 0? new std::vector<luaValue>(nArr):new std::vector<luaValue>();
+    _map = new std::unordered_map<luaValue, luaValue>();
 }
 
 luaTable::luaTable(const luaTable & other){
-    arr = std::make_unique<std::vector<luaValue>>(*(other.arr));
-    _map = std::make_unique<std::unordered_map<luaValue, luaValue>>(*(other._map));
+    arr = new std::vector<luaValue>(*(other.arr));
+    _map = new std::unordered_map<luaValue, luaValue>(*(other._map));
 }
 
 luaTable::luaTable(luaTable && other){
-    arr.reset(); _map.reset();
-    arr = std::move(other.arr);
-    _map = std::move(other._map);
+//    arr.reset(); _map.reset();
+    delete arr; delete _map;
+    arr = new std::vector<luaValue>(*other.arr);
+    _map = new std::unordered_map<luaValue, luaValue>(*other._map);
 }
 
 luaTable& luaTable::operator=(const luaTable & other){
-    arr.reset(); _map.reset();
-    arr = std::make_unique<std::vector<luaValue>>(*(other.arr));
-    _map = std::make_unique<std::unordered_map<luaValue, luaValue>>(*(other._map));
+//    arr.reset(); _map.reset();
+    delete arr; delete _map;
+    arr = new std::vector<luaValue>(*other.arr);
+    _map = new std::unordered_map<luaValue, luaValue>(*other._map);
     return *this;
 }
 
 luaTable::~luaTable() {
-    arr.reset();
-    _map.reset();
+    delete arr; delete _map;
 }
 
 bool operator==(const luaTable & l, const luaTable & r){
@@ -43,7 +40,7 @@ bool operator==(const luaTable & l, const luaTable & r){
 }
 
 
-luaValue luaTable::get(const luaValue & key) const {
+luaValue & luaTable::get(const luaValue & key) const {
     if (key.type() == luaValue::Int){
         auto idx = key.get<luaValue::Int>();
         if (idx >= 1 && idx <= arr->size()) return arr->at(idx-1);
@@ -134,17 +131,5 @@ void luaTable::put(luaValue K, luaValue V) {
             }else{
                 _map->erase(K);
             }
-    }
-    if (K.type() == luaValue::Nil){
-        std::cerr << "Trying to make index equal to Nil!" << std::endl;
-        abort();
-    }
-    if (K.type() == luaValue::Float){
-        auto f = K.get<luaValue::Float>();
-        if (std::isnan(f)){
-            std::cerr << "Trying to insert an index whihc is NaN!" << std::endl;
-            abort();
-        }
-
     }
 }

@@ -10,10 +10,11 @@
 #include <unordered_map>
 #include "luaValue.h"
 
+
 class luaTable{
 private:
-    std::unique_ptr<std::vector<luaValue>> arr;
-    std::unique_ptr<std::unordered_map<luaValue, luaValue>> _map;
+    std::vector<luaValue> * arr;
+    std::unordered_map<luaValue, luaValue> * _map;
     luaValue __floatToInteger(const luaValue & key) const ;
     void __shrinkArray();
     void __expandArray();
@@ -22,10 +23,10 @@ public:
     luaTable(const luaTable & other);
     luaTable(luaTable && other);
     ~luaTable();
-    luaValue get(const luaValue & key) const ;
+    luaValue & get(const luaValue & key) const ;
     void put(luaValue K, luaValue V);
     [[nodiscard]] size_t len() const noexcept{
-        return arr->size();
+        return _map->size();
     }
     luaTable& operator=(const luaTable & other);
 

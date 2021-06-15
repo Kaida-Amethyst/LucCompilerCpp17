@@ -11,6 +11,11 @@
 
 using namespace std::string_literals;
 
+luaState::luaState():stack{ new luaStack(20)}, registry{new luaTable(0, 0)}{
+    registry->put(luaValue(LUA_RIDX_GLOBALS), luaValue(new luaTable(0,0)));
+    this->pushLuaStack(new luaStack(LUA_MINSTACK));
+};
+
 int luaState::GetTop() const{
     return stack->top;
 }
@@ -119,33 +124,33 @@ LuaType luaState::Type(int idx) const {
     return LUA_TNONE;
 }
 
-inline bool luaState::IsNone(int idx) const{
+bool luaState::IsNone(int idx) const{
     return Type(idx) == LUA_TNONE;
 }
 
-inline bool luaState::IsNil(int idx) const{
+bool luaState::IsNil(int idx) const{
     return Type(idx) == LUA_TNIL;
 }
 
-inline bool luaState::IsNoneOrNil(int idx) const{
+bool luaState::IsNoneOrNil(int idx) const{
     return Type(idx) == LUA_TNONE || Type(idx) == LUA_TNIL;
 }
 
-inline bool luaState::IsBoolean(int idx) const{
+bool luaState::IsBoolean(int idx) const{
     return Type(idx) == LUA_TBOOLEAN;
 }
 
-inline bool luaState::IsString(int idx) const {
+bool luaState::IsString(int idx) const {
     auto t{Type(idx)};
     return t == LUA_TSTRING || t == LUA_TNUMBER;
 }
 
-inline bool luaState::IsNumber(int idx) const {
+bool luaState::IsNumber(int idx) const {
     auto [_, ok] = ToNumberX(idx);
     return ok;
 }
 
-inline bool luaState::IsInteger(int idx) const {
+bool luaState::IsInteger(int idx) const {
     auto val{stack->get(idx)};
     if (val.index() == luaValue::Int)return true;
     if (val.index() == luaValue::String){
@@ -414,13 +419,13 @@ LuaType luaState::__getTable(const luaValue& t, const luaValue& k) {
         stack->push(v);
         return typeOf(v);
     }else{
-        std::cerr << "Not a Table! Location: lua_state::getTable" << std::endl;
+        std::cerr << "Not a Table! Location: lua_state::getTable, t.type = " << t.type() << std::endl;
         abort();
     }
 }
 
 LuaType luaState::GetTable(int idx) {
-    auto & t = stack->get(idx);
+    auto t = stack->get(idx);
     auto k = stack->pop();
     return __getTable(t, k);
 }
@@ -436,10 +441,11 @@ LuaType luaState::GetI(int idx, int64_t i) {
 }
 
 void luaState::SetTable(int idx) {
-    auto & t = stack->get(idx);
+    auto t = stack->get(idx);
     auto v = stack->pop();
     auto k = stack->pop();
     __setTable(t,k,v);
+    return ;
 }
 
 void luaState::__setTable(const luaValue& t, luaValue k, luaValue v) {
@@ -448,7 +454,7 @@ void luaState::__setTable(const luaValue& t, luaValue k, luaValue v) {
         tbl->put(std::move(k), std::move(v));
         return;
     }else{
-        std::cerr << "Not a Table! Location: lua_state::getTable" << std::endl;
+        std::cerr << "Not a Table! Location: lua_state::setTable, t.type = "<< t.type() << std::endl;
         abort();
     }
 }
@@ -463,7 +469,7 @@ void luaState::SetField(int idx, const std::string & k) {
 }
 
 void luaState::SetI(int idx, int64_t i) {
-    auto & t = stack->get(idx);
+    auto t = stack->get(idx);
     auto v = stack->pop();
     __setTable(t, luaValue(i), v);
 }
@@ -477,6 +483,60 @@ void luaState::popLuaStack() {
     auto st = this->stack;
     this->stack = st->prev;
     st->prev = nullptr;
+}
+
+void luaState::pushExFunction(ExFunction f){
+    this->stack->emplace(new luaClosure(std::move(f), 0));
+}
+
+void luaState::pushExClosure(ExFunction f, int n) {
+    auto closure = new luaClosure(std::move(f), n);
+    for(auto i=n;i>0;i--){
+        auto val = this->stack->pop();
+        closure->upvals->at(n - 1) = &val;
+    }
+    this->stack->emplace(closure);
+}
+
+bool luaState::isExFunction(int idx){
+    auto val = this->stack->get(idx);
+    if (val.type() == luaValue::Closure){
+        auto * c = val.get<luaValue::Closure>();
+        return c->func != nullptr;
+    }
+    return false;
+}
+
+ExFunction luaState::ToExFunction(int idx){
+    auto val = this->stack->get(idx);
+    if (val.type() == luaValue::Closure){
+        auto * c = val.get<luaValue::Closure>();
+        return c->func;
+    }
+    return nullptr;
+}
+
+
+void luaState::PushGlobalTable(){
+    auto global = this->registry->get(luaValue(LUA_RIDX_GLOBALS));
+    this->stack->push(global);
+}
+
+LuaType luaState::GetGlobal(const std::string & name){
+    auto t = this->registry->get(luaValue(LUA_RIDX_GLOBALS));
+    return this->__getTable(t, luaValue(name));
+}
+
+void luaState::SetGlobal(const std::string & name){
+    auto & t = this->registry->get(luaValue(LUA_RIDX_GLOBALS));
+    auto v = this->stack->pop();
+    this->__setTable(t, luaValue(name), v);
+}
+
+
+void luaState::Register(const std::string & name, ExFunction f){
+    this->pushExFunction(std::move(f));
+    this->SetGlobal(name);
 }
 
 

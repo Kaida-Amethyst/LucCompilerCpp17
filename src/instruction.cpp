@@ -68,6 +68,12 @@ void Instruction::Execute(LuaVM &vm) {
         std::cerr << OpName() << "Location: Instruction.cpp" << std::endl;
         abort();
     }
+
+//    std::cerr << "vm stack slots: " ;
+//    for(auto i=0;i<vm.stack->top;i++){
+//        std::cerr << "[" <<  vm.stack->slots->at(i) << "]";
+//    }
+//    std::cerr << std::endl;
 }
 
 
@@ -81,7 +87,7 @@ void jmp(Instruction & i, LuaVM & vm){
     auto [a, sBx] = i.AsBx();
     vm.AddPC(sBx);
     if (a != 0){
-        std::cerr << "Todo! Location: inst_mis.cpp: jmp" << std::endl;
+        vm.CloseUpvalues(a);
         abort();
     }
 }
@@ -343,7 +349,7 @@ void _return(Instruction & i, LuaVM & vm){
 
     }else if (b > 1){
         vm.CheckStack(b-1);
-        for (auto idx=a;idx < a+b-2;idx++){
+        for (auto idx=a;idx <= a+b-2;idx++){
             vm.PushValue(idx);
         }
     }else{
@@ -389,4 +395,43 @@ void _popResults(int a, int c, LuaVM & vm){
         vm.CheckStack(1);
         vm.PushInteger(static_cast<int64_t>(a));
     }
+}
+
+
+
+static inline int LuaUpvalueIndex(int i){
+    return LUA_REGISTRYINDEX - i;
+}
+
+void getUpVal(Instruction & i, LuaVM & vm){
+    auto [a,b,_] = i.ABC();
+    a++; b++;
+    vm.Copy(LuaUpvalueIndex(b), a);
+}
+
+void setUpVal(Instruction & i, LuaVM & vm){
+    auto [a, b, _] = i.ABC();
+    a++; b++;
+    vm.Copy(a, LuaUpvalueIndex(b));
+}
+
+void getTabUp(Instruction & i, LuaVM & vm){
+    auto [a,b, c] = i.ABC();
+    a ++; b++;
+    vm.GetRK(c);
+    vm.GetTable(LuaUpvalueIndex(b));
+    vm.Replace(a);
+}
+
+void setTabUp(Instruction & i, LuaVM & vm){
+    auto [a,b, c] = i.ABC();
+    a++;
+    vm.GetRK(b);
+    vm.GetRK(c);
+//    std::cerr << "using setTabUp, vm stack slots: " ;
+//    for(auto i=0;i<vm.stack->top;i++){
+//        std::cerr << "[" <<  vm.stack->slots->at(i) << "]";
+//    }
+    std::cerr << std::endl;
+    vm.SetTable(LuaUpvalueIndex(a));
 }

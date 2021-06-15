@@ -7,18 +7,24 @@
 
 #include <vector>
 #include "luaValue.h"
-#include "../luaClosure.h"
+#include "luaClosure.h"
+
+class luaState;
 
 class luaStack{
-private:
+//private:
+public:
     std::vector<luaValue> *slots;
     int top;
     luaStack * prev;
     luaClosure * closure;
     std::vector<luaValue> * varargs;
     int pc;
+    luaState * state;
+    std::unordered_map<int, luaValue*> * openuvs;
 public:
     explicit luaStack(int size);
+    luaStack(int size, luaState * s);
     ~luaStack();
     void check(int n); // Whether we can put n values into slots?
     void push(const luaValue& val);
@@ -30,7 +36,7 @@ public:
     luaValue pop();
     int absIndex(int idx) const;
     bool isValid(int idx) const;
-    luaValue& get(int idx) const;
+    luaValue get(int idx) const;
     void set(int idx, const luaValue& val);
 
     template<typename T>

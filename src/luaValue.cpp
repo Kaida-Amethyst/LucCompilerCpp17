@@ -6,6 +6,8 @@
 #include <iostream>
 
 
+extern luaValue lnil{};
+
 size_t luaValue::index() const noexcept {
     return value.index();
 }
@@ -141,4 +143,28 @@ bool operator==(const luaValue & l, const luaTable & t){
 
 bool operator==(const luaTable & t, const luaValue & l){
     return l == t;
+}
+
+std::ostream& operator<<(std::ostream & os, luaValue & v){
+    switch (v.type()) {
+        case luaValue::Nil:
+            os << "Nil";
+            break;
+        case luaValue::Int:
+            os << v.get<1>();
+            break;
+        case luaValue::Float:
+            os << v.get<luaValue::Float>();
+            break;
+        case luaValue::String:
+            os << v.get<luaValue::String>();
+            break;
+        case luaValue::Table:
+            os << "Table";
+            break;
+        case luaValue::Closure:
+            os << "Function";
+            break;
+    }
+    return os;
 }

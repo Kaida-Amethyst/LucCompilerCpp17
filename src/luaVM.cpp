@@ -17,7 +17,7 @@ void LuaVM::AddPC(int n) {
 }
 
 uint32_t LuaVM::Fetch() {
-    std::cerr << "stack->pc = " << stack->pc << " ";
+//    std::cerr << "stack->pc = " << stack->pc << " ";
     auto i = stack->closure->proto->Code->at(stack->pc);
     stack->pc++;
     return i;
@@ -39,9 +39,9 @@ void LuaVM::GetRK(int rk) {
 void LuaVM::runLuaClosure() {
     while(true){
         auto f = this->Fetch();
-        std::cerr << "Fetch : " << f << " ";
+//        std::cerr << "Fetch : " << f << " ";
         auto inst = new Instruction(f);
-        std::cerr << "Execute " << inst->OpName() << std::endl;
+//        std::cerr << "Execute " << inst->OpName() << std::endl;
         inst->Execute(*this);
         if (inst->Opcode() == OP_RETURN){
             break;
@@ -78,26 +78,52 @@ void LuaVM::callLuaClosure(int nArgs, int nResults, luaClosure * c) {
     }
 }
 
+void LuaVM::callExClosure(int nArgs, int nResults, luaClosure *c) {
+    auto newStack = new luaStack(nArgs + 20);
+    newStack->closure = c;
+    auto args = this->stack->popN(nArgs);
+    newStack->pushN(args, nArgs);
+    this->stack->pop();
+    this->pushLuaStack(newStack);
+    auto r = c->func(this);
+    this->popLuaStack();
+    if (nResults != 0){
+        auto results = newStack->popN(r);
+        this->stack->check(static_cast<int>(results->size()));
+        this->stack->pushN(results, nResults);
+    }
+}
+
 int LuaVM::Load(byte * chunk, const std::string& chunkName, char mode) {
     auto proto = Undump(chunk);
-//    luaValue c(proto);
-//    c.CreateClosure(proto);
-//    std::cerr << "After c.CreateClosure, c.type = " << c.type() << std::endl;
-    this->stack->emplace(proto);
+    auto c = new luaClosure(proto);
+    if (proto->Upvalues != nullptr && !proto->Upvalues->empty()){
+        auto & env = this->registry->get(luaValue(LUA_RIDX_GLOBALS));
+        c->upvals->at(0) = &env;
+    }
+    this->stack->emplace(c);
     return 0;
 }
 
 void LuaVM::Call(int nArgs, int nResults) {
-    auto & val = stack->get(-(nArgs +1));
+//    for(auto i=0;i<stack->top;i++){
+//        std::cout << "val.type() = " << stack->slots->at(i).type() << " val = "  << stack->slots->at(i) << std::endl;
+//    }
+//    std::cout << std::endl;
+    auto val = stack->get(-(nArgs +1));
     if (val.type() == luaValue::Closure){
         luaClosure * c = val.get<luaValue::Closure>();
-        std::cout << "call " << c->proto->Source
-                  << "<" << c->proto->LineDefined
-                  << ", "<< c->proto->LastLineDefined
-                  << ">" << std::endl;
-        this->callLuaClosure(nArgs, nResults, c);
+//        std::cout << "call " << c->proto->Source
+//                  << "<" << c->proto->LineDefined
+//                  << ", "<< c->proto->LastLineDefined
+//                  << ">" << std::endl;
+        if (c->proto != nullptr){
+            this->callLuaClosure(nArgs, nResults, c);
+        } else {
+            this->callExClosure(nArgs, nResults, c);
+        }
     }else{
-        std::cerr << "Not a Fucntion! Location: lua_vm.cpp, val.type() = " << val.type() << std::endl;
+        std::cerr << "Not a Fucntion! Location: luaVM.cpp, val.type() = " << val.type() << std::endl;
         abort();
     }
 }
@@ -115,9 +141,36 @@ void LuaVM::LoadVararg(int n) {
 }
 
 void LuaVM::LoadProto(int idx) {
-    auto proto = this->stack->closure->proto->Protos->at(idx);
-    this->stack->emplace(proto);
-//    auto clousre = new luaValue();
-//    clousre->CreateClosure(proto);
-//    this->stack->push(clousre);
+    auto subProto = stack->closure->proto->Protos->at(idx);
+    auto closure = new luaClosure(subProto);
+    for(auto i = 0; i < subProto->Upvalues->size();i++){
+        auto & uvInfo = subProto->Upvalues->at(i);
+        auto uvIdx = static_cast<int>(uvInfo.Idx);
+        if (uvInfo.Instack == 1){
+            if (stack->openuvs == nullptr){
+                stack->openuvs = new std::unordered_map<int, luaValue*>();
+            }
+            if (stack->openuvs->find(uvIdx) != stack->openuvs->end()){
+                closure->upvals->at(i) = stack->openuvs->at(uvIdx);
+            }else{
+                closure->upvals->at(i) = &stack->slots->at(uvIdx);
+                stack->openuvs->insert(std::pair{uvIdx, closure->upvals->at(i)});
+            }
+        }else{
+            closure->upvals->at(i) = stack->closure->upvals->at(uvIdx);
+        }
+    }
+    stack->push(luaValue(closure));
+//    auto proto = this->stack->closure->proto->Protos->at(idx);
+//    this->stack->emplace(proto);
+}
+
+void LuaVM::CloseUpvalues(int a) {
+    for(auto & [i, openuv] : *this->stack->openuvs){
+        if (i >= a-1){
+//            auto val = *openuv;
+//            openuv = &val;
+            this->stack->openuvs->erase(i);
+        }
+    }
 }

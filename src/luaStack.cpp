@@ -3,10 +3,21 @@
 //
 
 #include "luaStack.h"
+#include "luaState.h"
 #include <iostream>
 #include <algorithm>
 
-luaStack::luaStack(int size):slots{new std::vector<luaValue>(size)}, top{0}, prev{nullptr}, closure{nullptr},pc{0} {}
+luaStack::luaStack(int size):
+slots{new std::vector<luaValue>(size)},
+top{0}, prev{nullptr},
+closure{nullptr},
+pc{0},state{nullptr},openuvs{nullptr} {}
+
+luaStack::luaStack(int size, luaState * s):
+slots{new std::vector<luaValue>(size)},
+top{0}, prev{nullptr},
+closure{nullptr},
+pc{0},state{s},openuvs{nullptr} {}
 
 luaStack::~luaStack() { delete slots;}
 
@@ -16,12 +27,13 @@ void luaStack::check(int n) {
 }
 
 void luaStack::push(const luaValue & val) {
-    if (top == slots->size()){
+    if (this->top == slots->size()){
         std::cerr << "Stack Overflow! Location: state/lua_stack" << std::endl;
-        std::cerr << "top = " << top << " size = " << slots->size() << std::endl;
+        std::cerr << "top = " << this->top << " size = " << slots->size() << std::endl;
     }
     slots->at(top) = val;
-    top++;
+    this->top++;
+    return ;
 }
 
 luaValue luaStack::pop() {
@@ -33,16 +45,43 @@ luaValue luaStack::pop() {
 }
 
 int luaStack::absIndex(int idx) const {
+    if (idx <= LUA_REGISTRYINDEX){
+        return idx;
+    }
+
     if (idx >= 0) return idx;
     return idx + top + 1;
 }
 
 bool luaStack::isValid(int idx) const {
+    if (idx < LUA_REGISTRYINDEX){
+        auto uvIdx = LUA_REGISTRYINDEX - idx - 1;
+        auto c = this->closure;
+        return c != nullptr && c->upvals != nullptr && uvIdx < c->upvals->size();
+    }
+
+    if (idx == LUA_REGISTRYINDEX){
+        return true;
+    }
+
     idx = absIndex(idx);
     return idx > 0 && idx <= top;
 }
 
-luaValue& luaStack::get(int idx) const {
+luaValue luaStack::get(int idx) const {
+    if (idx < LUA_REGISTRYINDEX){
+        auto uvIdx = LUA_REGISTRYINDEX - idx -1;
+        auto c = this->closure;
+        if (c == nullptr || c->upvals == nullptr || uvIdx >= c->upvals->size()){
+            return luaValue(nil);
+        }
+        return *c->upvals->at(uvIdx);
+    }
+
+    if (idx == LUA_REGISTRYINDEX){
+        return luaValue(this->state->registry);
+    }
+
     idx = absIndex(idx);
     if (idx <= 0 && idx > top){
         std::cerr << "Invalid idx! Location: lua_stack.cpp, idx = " << idx << std::endl;
@@ -53,6 +92,24 @@ luaValue& luaStack::get(int idx) const {
 
 
 void luaStack::set(int idx, const luaValue& val){
+    if (idx < LUA_REGISTRYINDEX){
+        auto uvIdx = LUA_REGISTRYINDEX - idx - 1;
+        auto c = this->closure;
+        if (c != nullptr && c->upvals != nullptr && uvIdx < c->upvals->size()){
+            *(c->upvals->at(uvIdx)) = val;
+        }
+        return ;
+    }
+
+    if (idx == LUA_REGISTRYINDEX){
+        if (val.type() == luaValue::Table){
+            std::cerr << "set error!, val is not a table! Location: luaStack::set" << std::endl;
+            abort();
+        }
+        this->state->registry = val.get<luaValue::Table>();
+        return ;
+    }
+
     idx = absIndex(idx);
     if (idx > 0 && idx <= top){
         slots->at(idx-1) = val;

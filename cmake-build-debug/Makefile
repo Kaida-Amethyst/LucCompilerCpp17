@@ -66,10 +66,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "E:\C&C++Proj\LuaCompiler_renew"
+CMAKE_SOURCE_DIR = "E:\C&C++Proj\LuaCompiler\ch10"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug"
+CMAKE_BINARY_DIR = "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,9 +98,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" "E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -129,44 +129,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named LuaCompiler_renew
+# Target rules for targets named ch10
 
 # Build rule for target.
-LuaCompiler_renew: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 LuaCompiler_renew
-.PHONY : LuaCompiler_renew
+ch10: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ch10
+.PHONY : ch10
 
 # fast build rule for target.
-LuaCompiler_renew/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/build
-.PHONY : LuaCompiler_renew/fast
-
-luaClosure.obj: luaClosure.cpp.obj
-
-.PHONY : luaClosure.obj
-
-# target to build an object file
-luaClosure.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.obj
-.PHONY : luaClosure.cpp.obj
-
-luaClosure.i: luaClosure.cpp.i
-
-.PHONY : luaClosure.i
-
-# target to preprocess a source file
-luaClosure.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.i
-.PHONY : luaClosure.cpp.i
-
-luaClosure.s: luaClosure.cpp.s
-
-.PHONY : luaClosure.s
-
-# target to generate assembly for a file
-luaClosure.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.s
-.PHONY : luaClosure.cpp.s
+ch10/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/build
+.PHONY : ch10/fast
 
 main.obj: main.cpp.obj
 
@@ -174,7 +147,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -183,7 +156,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -192,7 +165,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 src/ByteStreamReader.obj: src/ByteStreamReader.cpp.obj
@@ -201,7 +174,7 @@ src/ByteStreamReader.obj: src/ByteStreamReader.cpp.obj
 
 # target to build an object file
 src/ByteStreamReader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/ByteStreamReader.cpp.obj
 .PHONY : src/ByteStreamReader.cpp.obj
 
 src/ByteStreamReader.i: src/ByteStreamReader.cpp.i
@@ -210,7 +183,7 @@ src/ByteStreamReader.i: src/ByteStreamReader.cpp.i
 
 # target to preprocess a source file
 src/ByteStreamReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/ByteStreamReader.cpp.i
 .PHONY : src/ByteStreamReader.cpp.i
 
 src/ByteStreamReader.s: src/ByteStreamReader.cpp.s
@@ -219,7 +192,7 @@ src/ByteStreamReader.s: src/ByteStreamReader.cpp.s
 
 # target to generate assembly for a file
 src/ByteStreamReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/ByteStreamReader.cpp.s
 .PHONY : src/ByteStreamReader.cpp.s
 
 src/arith.obj: src/arith.cpp.obj
@@ -228,7 +201,7 @@ src/arith.obj: src/arith.cpp.obj
 
 # target to build an object file
 src/arith.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/arith.cpp.obj
 .PHONY : src/arith.cpp.obj
 
 src/arith.i: src/arith.cpp.i
@@ -237,7 +210,7 @@ src/arith.i: src/arith.cpp.i
 
 # target to preprocess a source file
 src/arith.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/arith.cpp.i
 .PHONY : src/arith.cpp.i
 
 src/arith.s: src/arith.cpp.s
@@ -246,7 +219,7 @@ src/arith.s: src/arith.cpp.s
 
 # target to generate assembly for a file
 src/arith.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/arith.cpp.s
 .PHONY : src/arith.cpp.s
 
 src/assistants.obj: src/assistants.cpp.obj
@@ -255,7 +228,7 @@ src/assistants.obj: src/assistants.cpp.obj
 
 # target to build an object file
 src/assistants.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/assistants.cpp.obj
 .PHONY : src/assistants.cpp.obj
 
 src/assistants.i: src/assistants.cpp.i
@@ -264,7 +237,7 @@ src/assistants.i: src/assistants.cpp.i
 
 # target to preprocess a source file
 src/assistants.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/assistants.cpp.i
 .PHONY : src/assistants.cpp.i
 
 src/assistants.s: src/assistants.cpp.s
@@ -273,7 +246,7 @@ src/assistants.s: src/assistants.cpp.s
 
 # target to generate assembly for a file
 src/assistants.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/assistants.cpp.s
 .PHONY : src/assistants.cpp.s
 
 src/chunkStruct.obj: src/chunkStruct.cpp.obj
@@ -282,7 +255,7 @@ src/chunkStruct.obj: src/chunkStruct.cpp.obj
 
 # target to build an object file
 src/chunkStruct.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/chunkStruct.cpp.obj
 .PHONY : src/chunkStruct.cpp.obj
 
 src/chunkStruct.i: src/chunkStruct.cpp.i
@@ -291,7 +264,7 @@ src/chunkStruct.i: src/chunkStruct.cpp.i
 
 # target to preprocess a source file
 src/chunkStruct.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/chunkStruct.cpp.i
 .PHONY : src/chunkStruct.cpp.i
 
 src/chunkStruct.s: src/chunkStruct.cpp.s
@@ -300,8 +273,35 @@ src/chunkStruct.s: src/chunkStruct.cpp.s
 
 # target to generate assembly for a file
 src/chunkStruct.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/chunkStruct.cpp.s
 .PHONY : src/chunkStruct.cpp.s
+
+src/consts.obj: src/consts.cpp.obj
+
+.PHONY : src/consts.obj
+
+# target to build an object file
+src/consts.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/consts.cpp.obj
+.PHONY : src/consts.cpp.obj
+
+src/consts.i: src/consts.cpp.i
+
+.PHONY : src/consts.i
+
+# target to preprocess a source file
+src/consts.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/consts.cpp.i
+.PHONY : src/consts.cpp.i
+
+src/consts.s: src/consts.cpp.s
+
+.PHONY : src/consts.s
+
+# target to generate assembly for a file
+src/consts.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/consts.cpp.s
+.PHONY : src/consts.cpp.s
 
 src/instruction.obj: src/instruction.cpp.obj
 
@@ -309,7 +309,7 @@ src/instruction.obj: src/instruction.cpp.obj
 
 # target to build an object file
 src/instruction.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/instruction.cpp.obj
 .PHONY : src/instruction.cpp.obj
 
 src/instruction.i: src/instruction.cpp.i
@@ -318,7 +318,7 @@ src/instruction.i: src/instruction.cpp.i
 
 # target to preprocess a source file
 src/instruction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/instruction.cpp.i
 .PHONY : src/instruction.cpp.i
 
 src/instruction.s: src/instruction.cpp.s
@@ -327,8 +327,35 @@ src/instruction.s: src/instruction.cpp.s
 
 # target to generate assembly for a file
 src/instruction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/instruction.cpp.s
 .PHONY : src/instruction.cpp.s
+
+src/luaClosure.obj: src/luaClosure.cpp.obj
+
+.PHONY : src/luaClosure.obj
+
+# target to build an object file
+src/luaClosure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaClosure.cpp.obj
+.PHONY : src/luaClosure.cpp.obj
+
+src/luaClosure.i: src/luaClosure.cpp.i
+
+.PHONY : src/luaClosure.i
+
+# target to preprocess a source file
+src/luaClosure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaClosure.cpp.i
+.PHONY : src/luaClosure.cpp.i
+
+src/luaClosure.s: src/luaClosure.cpp.s
+
+.PHONY : src/luaClosure.s
+
+# target to generate assembly for a file
+src/luaClosure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaClosure.cpp.s
+.PHONY : src/luaClosure.cpp.s
 
 src/luaMath.obj: src/luaMath.cpp.obj
 
@@ -336,7 +363,7 @@ src/luaMath.obj: src/luaMath.cpp.obj
 
 # target to build an object file
 src/luaMath.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaMath.cpp.obj
 .PHONY : src/luaMath.cpp.obj
 
 src/luaMath.i: src/luaMath.cpp.i
@@ -345,7 +372,7 @@ src/luaMath.i: src/luaMath.cpp.i
 
 # target to preprocess a source file
 src/luaMath.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaMath.cpp.i
 .PHONY : src/luaMath.cpp.i
 
 src/luaMath.s: src/luaMath.cpp.s
@@ -354,7 +381,7 @@ src/luaMath.s: src/luaMath.cpp.s
 
 # target to generate assembly for a file
 src/luaMath.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaMath.cpp.s
 .PHONY : src/luaMath.cpp.s
 
 src/luaStack.obj: src/luaStack.cpp.obj
@@ -363,7 +390,7 @@ src/luaStack.obj: src/luaStack.cpp.obj
 
 # target to build an object file
 src/luaStack.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaStack.cpp.obj
 .PHONY : src/luaStack.cpp.obj
 
 src/luaStack.i: src/luaStack.cpp.i
@@ -372,7 +399,7 @@ src/luaStack.i: src/luaStack.cpp.i
 
 # target to preprocess a source file
 src/luaStack.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaStack.cpp.i
 .PHONY : src/luaStack.cpp.i
 
 src/luaStack.s: src/luaStack.cpp.s
@@ -381,7 +408,7 @@ src/luaStack.s: src/luaStack.cpp.s
 
 # target to generate assembly for a file
 src/luaStack.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaStack.cpp.s
 .PHONY : src/luaStack.cpp.s
 
 src/luaState.obj: src/luaState.cpp.obj
@@ -390,7 +417,7 @@ src/luaState.obj: src/luaState.cpp.obj
 
 # target to build an object file
 src/luaState.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaState.cpp.obj
 .PHONY : src/luaState.cpp.obj
 
 src/luaState.i: src/luaState.cpp.i
@@ -399,7 +426,7 @@ src/luaState.i: src/luaState.cpp.i
 
 # target to preprocess a source file
 src/luaState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaState.cpp.i
 .PHONY : src/luaState.cpp.i
 
 src/luaState.s: src/luaState.cpp.s
@@ -408,7 +435,7 @@ src/luaState.s: src/luaState.cpp.s
 
 # target to generate assembly for a file
 src/luaState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaState.cpp.s
 .PHONY : src/luaState.cpp.s
 
 src/luaTable.obj: src/luaTable.cpp.obj
@@ -417,7 +444,7 @@ src/luaTable.obj: src/luaTable.cpp.obj
 
 # target to build an object file
 src/luaTable.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaTable.cpp.obj
 .PHONY : src/luaTable.cpp.obj
 
 src/luaTable.i: src/luaTable.cpp.i
@@ -426,7 +453,7 @@ src/luaTable.i: src/luaTable.cpp.i
 
 # target to preprocess a source file
 src/luaTable.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaTable.cpp.i
 .PHONY : src/luaTable.cpp.i
 
 src/luaTable.s: src/luaTable.cpp.s
@@ -435,7 +462,7 @@ src/luaTable.s: src/luaTable.cpp.s
 
 # target to generate assembly for a file
 src/luaTable.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaTable.cpp.s
 .PHONY : src/luaTable.cpp.s
 
 src/luaVM.obj: src/luaVM.cpp.obj
@@ -444,7 +471,7 @@ src/luaVM.obj: src/luaVM.cpp.obj
 
 # target to build an object file
 src/luaVM.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaVM.cpp.obj
 .PHONY : src/luaVM.cpp.obj
 
 src/luaVM.i: src/luaVM.cpp.i
@@ -453,7 +480,7 @@ src/luaVM.i: src/luaVM.cpp.i
 
 # target to preprocess a source file
 src/luaVM.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaVM.cpp.i
 .PHONY : src/luaVM.cpp.i
 
 src/luaVM.s: src/luaVM.cpp.s
@@ -462,7 +489,7 @@ src/luaVM.s: src/luaVM.cpp.s
 
 # target to generate assembly for a file
 src/luaVM.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaVM.cpp.s
 .PHONY : src/luaVM.cpp.s
 
 src/luaValue.obj: src/luaValue.cpp.obj
@@ -471,7 +498,7 @@ src/luaValue.obj: src/luaValue.cpp.obj
 
 # target to build an object file
 src/luaValue.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaValue.cpp.obj
 .PHONY : src/luaValue.cpp.obj
 
 src/luaValue.i: src/luaValue.cpp.i
@@ -480,7 +507,7 @@ src/luaValue.i: src/luaValue.cpp.i
 
 # target to preprocess a source file
 src/luaValue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaValue.cpp.i
 .PHONY : src/luaValue.cpp.i
 
 src/luaValue.s: src/luaValue.cpp.s
@@ -489,7 +516,7 @@ src/luaValue.s: src/luaValue.cpp.s
 
 # target to generate assembly for a file
 src/luaValue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaValue.cpp.s
 .PHONY : src/luaValue.cpp.s
 
 src/nil.obj: src/nil.cpp.obj
@@ -498,7 +525,7 @@ src/nil.obj: src/nil.cpp.obj
 
 # target to build an object file
 src/nil.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/nil.cpp.obj
 .PHONY : src/nil.cpp.obj
 
 src/nil.i: src/nil.cpp.i
@@ -507,7 +534,7 @@ src/nil.i: src/nil.cpp.i
 
 # target to preprocess a source file
 src/nil.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/nil.cpp.i
 .PHONY : src/nil.cpp.i
 
 src/nil.s: src/nil.cpp.s
@@ -516,7 +543,7 @@ src/nil.s: src/nil.cpp.s
 
 # target to generate assembly for a file
 src/nil.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/nil.cpp.s
 .PHONY : src/nil.cpp.s
 
 src/opcodes.obj: src/opcodes.cpp.obj
@@ -525,7 +552,7 @@ src/opcodes.obj: src/opcodes.cpp.obj
 
 # target to build an object file
 src/opcodes.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/opcodes.cpp.obj
 .PHONY : src/opcodes.cpp.obj
 
 src/opcodes.i: src/opcodes.cpp.i
@@ -534,7 +561,7 @@ src/opcodes.i: src/opcodes.cpp.i
 
 # target to preprocess a source file
 src/opcodes.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/opcodes.cpp.i
 .PHONY : src/opcodes.cpp.i
 
 src/opcodes.s: src/opcodes.cpp.s
@@ -543,7 +570,7 @@ src/opcodes.s: src/opcodes.cpp.s
 
 # target to generate assembly for a file
 src/opcodes.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler_renew.dir\build.make CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/opcodes.cpp.s
 .PHONY : src/opcodes.cpp.s
 
 # Help Target
@@ -554,10 +581,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... LuaCompiler_renew
-	@echo ... luaClosure.obj
-	@echo ... luaClosure.i
-	@echo ... luaClosure.s
+	@echo ... ch10
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -573,9 +597,15 @@ help:
 	@echo ... src/chunkStruct.obj
 	@echo ... src/chunkStruct.i
 	@echo ... src/chunkStruct.s
+	@echo ... src/consts.obj
+	@echo ... src/consts.i
+	@echo ... src/consts.s
 	@echo ... src/instruction.obj
 	@echo ... src/instruction.i
 	@echo ... src/instruction.s
+	@echo ... src/luaClosure.obj
+	@echo ... src/luaClosure.i
+	@echo ... src/luaClosure.s
 	@echo ... src/luaMath.obj
 	@echo ... src/luaMath.i
 	@echo ... src/luaMath.s

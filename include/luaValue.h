@@ -11,10 +11,12 @@
 #include <string>
 #include "consts.h"
 #include <iostream>
-#include "../luaClosure.h"
+#include "luaClosure.h"
 
 
 class luaTable;
+
+extern luaValue lnil;
 
 class luaValue{
 private:
@@ -60,12 +62,12 @@ public:
     size_t type() const noexcept;
 
     template<typename T>
-    T get(){
+    T & get(){
         return std::get<T>(this->value);
     }
 
     template<size_t idx>
-    auto get() const {
+    auto & get() const {
         return std::get<idx>(this->value);
     }
 
@@ -124,6 +126,6 @@ bool operator==(const bool & b,          const luaValue & l);
 bool operator==(const std::string & str, const luaValue & l);
 bool operator==(const luaTable & t,      const luaValue & l);
 
-
+std::ostream& operator<<(std::ostream & os, luaValue & v);
 
 #endif //LUACOMPILER_RENEW_LUAVALUE_H

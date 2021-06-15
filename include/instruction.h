@@ -108,5 +108,12 @@ void _fixStack(int a, LuaVM & vm);
 
 
 
+void getUpVal(Instruction & i, LuaVM & vm);
+void setUpVal(Instruction & i, LuaVM & vm);
+void getTabUp(Instruction & i, LuaVM & vm);
+void setTabUp(Instruction & i, LuaVM & vm);
+
+
+
 
 #endif //LUACOMPILER_RENEW_INSTRUCTION_H

@@ -5,6 +5,13 @@
 #ifndef LUACOMPILER_RENEW_CONSTS_H
 #define LUACOMPILER_RENEW_CONSTS_H
 
+#include <cstdint>
+
+extern const int LUA_MINSTACK;
+extern const int LUAI_MAXSTACK;
+extern const int LUA_REGISTRYINDEX;
+extern const int64_t LUA_RIDX_GLOBALS;
+
 enum LuaType {
     LUA_TNONE = -1,
     LUA_TNIL,

@@ -8,12 +8,18 @@
 #include "luaStack.h"
 #include "arith.h"
 #include "chunkStruct.h"
+#include "exFunction.h"
 #include <memory>
+#include "luaTable.h"
 
 class luaState{
-protected:
+//protected:
+public:
+    luaTable * registry;
     luaStack * stack;
     Prototype *proto;
+    ExFunction exfunc;
+
     int pc;
     luaValue __arith(luaValue &a, luaValue &b, Operator &op);
     bool __eq(const luaValue &a, const luaValue &b) const;
@@ -23,7 +29,7 @@ protected:
     void __setTable(const luaValue& t, luaValue k, luaValue v);
 
 public:
-    luaState():stack{ new luaStack(20)}{};
+    luaState();
 //    luaState(int stackSize, Prototype *proto):stack{new luaStack(stackSize)},proto{proto}, pc{0}{};
     int GetTop() const;
     int AbsIndex(int idx) const;
@@ -38,13 +44,13 @@ public:
     void SetTop(int idx);
     static std::string TypeName(LuaType tp);
     LuaType Type(int idx)const;
-    inline bool IsNone(int idx)const;
-    inline bool IsNil(int idx)const;
-    inline bool IsNoneOrNil(int idx)const;
-    inline bool IsBoolean(int idx)const;
-    inline bool IsInteger(int idx)const;
-    inline bool IsNumber(int idx)const;
-    inline bool IsString(int idx)const;
+    bool IsNone(int idx)const;
+    bool IsNil(int idx)const;
+    bool IsNoneOrNil(int idx)const;
+    bool IsBoolean(int idx)const;
+    bool IsInteger(int idx)const;
+    bool IsNumber(int idx)const;
+    bool IsString(int idx)const;
     bool ToBoolean(int idx) const;
     int64_t ToInteger(int idx) const;
     std::pair<int64_t, bool> ToIntegerX(int idx) const ;
@@ -75,7 +81,20 @@ public:
     void pushLuaStack(luaStack * stack);
     void popLuaStack();
 
+    void pushExFunction(ExFunction f);
+    void pushExClosure(ExFunction f, int n);
+    bool isExFunction(int idx);
+    ExFunction ToExFunction(int idx);
 
+    void PushGlobalTable();
+    LuaType GetGlobal(const std::string & name);
+    void SetGlobal(const std::string & name);
+    void Register(const std::string & name, ExFunction f);
+
+
+    friend class luaStack;
 };
+
+
 
 #endif //LUACOMPILER_RENEW_LUASTATE_H

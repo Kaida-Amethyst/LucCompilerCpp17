@@ -61,10 +61,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "E:\C&C++Proj\LuaCompiler_renew"
+CMAKE_SOURCE_DIR = "E:\C&C++Proj\LuaCompiler\ch10"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug"
+CMAKE_BINARY_DIR = "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LuaCompiler_renew.dir/depend.make
@@ -78,212 +78,240 @@ include CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/main.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/main.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\main.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\main.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\main.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\main.cpp" > CMakeFiles\LuaCompiler_renew.dir\main.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\main.cpp" > CMakeFiles\LuaCompiler_renew.dir\main.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\main.cpp" -o CMakeFiles\LuaCompiler_renew.dir\main.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\main.cpp" -o CMakeFiles\LuaCompiler_renew.dir\main.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.obj: ../src/ByteStreamReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\ByteStreamReader.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\ByteStreamReader.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\ByteStreamReader.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\ByteStreamReader.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\ByteStreamReader.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\ByteStreamReader.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\ByteStreamReader.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\ByteStreamReader.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\ByteStreamReader.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\ByteStreamReader.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\ByteStreamReader.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\ByteStreamReader.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.obj: ../src/arith.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\arith.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\arith.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\arith.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\arith.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\arith.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\arith.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\arith.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\arith.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\arith.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\arith.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\arith.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\arith.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.obj: ../src/assistants.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\assistants.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\assistants.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\assistants.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\assistants.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\assistants.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\assistants.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\assistants.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\assistants.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\assistants.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\assistants.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\assistants.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\assistants.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.obj: ../src/chunkStruct.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\chunkStruct.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\chunkStruct.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\chunkStruct.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\chunkStruct.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\chunkStruct.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\chunkStruct.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\chunkStruct.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\chunkStruct.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\chunkStruct.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\chunkStruct.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\chunkStruct.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\chunkStruct.cpp.s
+
+CMakeFiles/LuaCompiler_renew.dir/src/consts.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
+CMakeFiles/LuaCompiler_renew.dir/src/consts.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
+CMakeFiles/LuaCompiler_renew.dir/src/consts.cpp.obj: ../src/consts.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/consts.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\consts.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\consts.cpp"
+
+CMakeFiles/LuaCompiler_renew.dir/src/consts.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/consts.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\consts.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\consts.cpp.i
+
+CMakeFiles/LuaCompiler_renew.dir/src/consts.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/consts.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\consts.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\consts.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.obj: ../src/instruction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\instruction.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\instruction.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\instruction.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\instruction.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\instruction.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\instruction.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\instruction.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\instruction.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\instruction.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\instruction.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\instruction.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\instruction.cpp.s
+
+CMakeFiles/LuaCompiler_renew.dir/src/luaClosure.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
+CMakeFiles/LuaCompiler_renew.dir/src/luaClosure.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
+CMakeFiles/LuaCompiler_renew.dir/src/luaClosure.cpp.obj: ../src/luaClosure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaClosure.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaClosure.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\luaClosure.cpp"
+
+CMakeFiles/LuaCompiler_renew.dir/src/luaClosure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/luaClosure.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\luaClosure.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaClosure.cpp.i
+
+CMakeFiles/LuaCompiler_renew.dir/src/luaClosure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/luaClosure.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\luaClosure.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaClosure.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.obj: ../src/luaMath.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaMath.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\luaMath.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaMath.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\luaMath.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\luaMath.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaMath.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\luaMath.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaMath.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\luaMath.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaMath.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\luaMath.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaMath.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.obj: ../src/luaStack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaStack.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\luaStack.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaStack.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\luaStack.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\luaStack.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaStack.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\luaStack.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaStack.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\luaStack.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaStack.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\luaStack.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaStack.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.obj: ../src/luaState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaState.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\luaState.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaState.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\luaState.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\luaState.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaState.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\luaState.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaState.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\luaState.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaState.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\luaState.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaState.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.obj: ../src/luaTable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaTable.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\luaTable.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaTable.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\luaTable.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\luaTable.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaTable.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\luaTable.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaTable.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/luaTable.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\luaTable.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaTable.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\luaTable.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaTable.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.obj: ../src/luaVM.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaVM.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\luaVM.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaVM.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\luaVM.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\luaVM.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaVM.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\luaVM.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaVM.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\luaVM.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaVM.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\luaVM.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaVM.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.obj: ../src/luaValue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaValue.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\luaValue.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\luaValue.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\luaValue.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\luaValue.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaValue.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\luaValue.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\luaValue.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\luaValue.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaValue.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\luaValue.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\luaValue.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.obj: ../src/nil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\nil.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\nil.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\nil.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\nil.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\nil.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\nil.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\nil.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\nil.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\nil.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\nil.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\nil.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\nil.cpp.s
 
 CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
 CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
 CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.obj: ../src/opcodes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\opcodes.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\src\opcodes.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\src\opcodes.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\src\opcodes.cpp"
 
 CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\src\opcodes.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\opcodes.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\src\opcodes.cpp" > CMakeFiles\LuaCompiler_renew.dir\src\opcodes.cpp.i
 
 CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\src\opcodes.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\opcodes.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\src\opcodes.cpp" -o CMakeFiles\LuaCompiler_renew.dir\src\opcodes.cpp.s
 
-CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
-CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
-CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.obj: ../luaClosure.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\luaClosure.cpp.obj -c "E:\C&C++Proj\LuaCompiler_renew\luaClosure.cpp"
+CMakeFiles/LuaCompiler_renew.dir/include/exFunction.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/flags.make
+CMakeFiles/LuaCompiler_renew.dir/include/exFunction.cpp.obj: CMakeFiles/LuaCompiler_renew.dir/includes_CXX.rsp
+CMakeFiles/LuaCompiler_renew.dir/include/exFunction.cpp.obj: ../include/exFunction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LuaCompiler_renew.dir/include/exFunction.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\LuaCompiler_renew.dir\include\exFunction.cpp.obj -c "E:\C&C++Proj\LuaCompiler\ch10\include\exFunction.cpp"
 
-CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler_renew\luaClosure.cpp" > CMakeFiles\LuaCompiler_renew.dir\luaClosure.cpp.i
+CMakeFiles/LuaCompiler_renew.dir/include/exFunction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LuaCompiler_renew.dir/include/exFunction.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C&C++Proj\LuaCompiler\ch10\include\exFunction.cpp" > CMakeFiles\LuaCompiler_renew.dir\include\exFunction.cpp.i
 
-CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler_renew\luaClosure.cpp" -o CMakeFiles\LuaCompiler_renew.dir\luaClosure.cpp.s
+CMakeFiles/LuaCompiler_renew.dir/include/exFunction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LuaCompiler_renew.dir/include/exFunction.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C&C++Proj\LuaCompiler\ch10\include\exFunction.cpp" -o CMakeFiles\LuaCompiler_renew.dir\include\exFunction.cpp.s
 
 # Object files for target LuaCompiler_renew
 LuaCompiler_renew_OBJECTS = \
@@ -292,7 +320,9 @@ LuaCompiler_renew_OBJECTS = \
 "CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.obj" \
 "CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.obj" \
 "CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.obj" \
+"CMakeFiles/LuaCompiler_renew.dir/src/consts.cpp.obj" \
 "CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.obj" \
+"CMakeFiles/LuaCompiler_renew.dir/src/luaClosure.cpp.obj" \
 "CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.obj" \
 "CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.obj" \
 "CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.obj" \
@@ -301,7 +331,7 @@ LuaCompiler_renew_OBJECTS = \
 "CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.obj" \
 "CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.obj" \
 "CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.obj" \
-"CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.obj"
+"CMakeFiles/LuaCompiler_renew.dir/include/exFunction.cpp.obj"
 
 # External object files for target LuaCompiler_renew
 LuaCompiler_renew_EXTERNAL_OBJECTS =
@@ -311,7 +341,9 @@ LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/ByteStreamReader.cpp
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/arith.cpp.obj
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/assistants.cpp.obj
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/chunkStruct.cpp.obj
+LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/consts.cpp.obj
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/instruction.cpp.obj
+LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/luaClosure.cpp.obj
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/luaMath.cpp.obj
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/luaStack.cpp.obj
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/luaState.cpp.obj
@@ -320,12 +352,12 @@ LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/luaVM.cpp.obj
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/luaValue.cpp.obj
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/nil.cpp.obj
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/src/opcodes.cpp.obj
-LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/luaClosure.cpp.obj
+LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/include/exFunction.cpp.obj
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/build.make
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/linklibs.rsp
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/objects1.rsp
 LuaCompiler_renew.exe: CMakeFiles/LuaCompiler_renew.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable LuaCompiler_renew.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable LuaCompiler_renew.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\LuaCompiler_renew.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -338,6 +370,6 @@ CMakeFiles/LuaCompiler_renew.dir/clean:
 .PHONY : CMakeFiles/LuaCompiler_renew.dir/clean
 
 CMakeFiles/LuaCompiler_renew.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "E:\C&C++Proj\LuaCompiler_renew" "E:\C&C++Proj\LuaCompiler_renew" "E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug" "E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug" "E:\C&C++Proj\LuaCompiler_renew\cmake-build-debug\CMakeFiles\LuaCompiler_renew.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "E:\C&C++Proj\LuaCompiler\ch10" "E:\C&C++Proj\LuaCompiler\ch10" "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug" "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug" "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles\LuaCompiler_renew.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/LuaCompiler_renew.dir/depend
 

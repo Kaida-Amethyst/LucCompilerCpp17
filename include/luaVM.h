@@ -38,12 +38,15 @@ public:
 
 
     void callLuaClosure(int nArgs, int nResults, luaClosure * c);
+    void callExClosure(int nArgs, int nResults, luaClosure * c);
     void runLuaClosure();
     int Load(byte * chunk, const std::string& chunkName, char mode);
     void Call(int nArgs, int nResults);
     int RegisterCount();
     void LoadVararg(int n);
     void LoadProto(int idx);
+
+    void CloseUpvalues(int a);
 
 };
 
