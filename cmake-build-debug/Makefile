@@ -66,10 +66,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "E:\C&C++Proj\LuaCompiler\ch10"
+CMAKE_SOURCE_DIR = "E:\C&C++Proj\LuaCompiler\ch17_ch12_integral"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug"
+CMAKE_BINARY_DIR = "E:\C&C++Proj\LuaCompiler\ch17_ch12_integral\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,9 +98,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C&C++Proj\LuaCompiler\ch17_ch12_integral\cmake-build-debug\CMakeFiles" "E:\C&C++Proj\LuaCompiler\ch17_ch12_integral\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C&C++Proj\LuaCompiler\ch10\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C&C++Proj\LuaCompiler\ch17_ch12_integral\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -129,17 +129,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ch10
+# Target rules for targets named LuaCompiler
 
 # Build rule for target.
-ch10: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ch10
-.PHONY : ch10
+LuaCompiler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 LuaCompiler
+.PHONY : LuaCompiler
 
 # fast build rule for target.
-ch10/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/build
-.PHONY : ch10/fast
+LuaCompiler/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/build
+.PHONY : LuaCompiler/fast
 
 main.obj: main.cpp.obj
 
@@ -147,7 +147,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -156,7 +156,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -165,7 +165,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 src/ByteStreamReader.obj: src/ByteStreamReader.cpp.obj
@@ -174,7 +174,7 @@ src/ByteStreamReader.obj: src/ByteStreamReader.cpp.obj
 
 # target to build an object file
 src/ByteStreamReader.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/ByteStreamReader.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/ByteStreamReader.cpp.obj
 .PHONY : src/ByteStreamReader.cpp.obj
 
 src/ByteStreamReader.i: src/ByteStreamReader.cpp.i
@@ -183,7 +183,7 @@ src/ByteStreamReader.i: src/ByteStreamReader.cpp.i
 
 # target to preprocess a source file
 src/ByteStreamReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/ByteStreamReader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/ByteStreamReader.cpp.i
 .PHONY : src/ByteStreamReader.cpp.i
 
 src/ByteStreamReader.s: src/ByteStreamReader.cpp.s
@@ -192,7 +192,7 @@ src/ByteStreamReader.s: src/ByteStreamReader.cpp.s
 
 # target to generate assembly for a file
 src/ByteStreamReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/ByteStreamReader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/ByteStreamReader.cpp.s
 .PHONY : src/ByteStreamReader.cpp.s
 
 src/arith.obj: src/arith.cpp.obj
@@ -201,7 +201,7 @@ src/arith.obj: src/arith.cpp.obj
 
 # target to build an object file
 src/arith.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/arith.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/arith.cpp.obj
 .PHONY : src/arith.cpp.obj
 
 src/arith.i: src/arith.cpp.i
@@ -210,7 +210,7 @@ src/arith.i: src/arith.cpp.i
 
 # target to preprocess a source file
 src/arith.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/arith.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/arith.cpp.i
 .PHONY : src/arith.cpp.i
 
 src/arith.s: src/arith.cpp.s
@@ -219,7 +219,7 @@ src/arith.s: src/arith.cpp.s
 
 # target to generate assembly for a file
 src/arith.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/arith.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/arith.cpp.s
 .PHONY : src/arith.cpp.s
 
 src/assistants.obj: src/assistants.cpp.obj
@@ -228,7 +228,7 @@ src/assistants.obj: src/assistants.cpp.obj
 
 # target to build an object file
 src/assistants.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/assistants.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/assistants.cpp.obj
 .PHONY : src/assistants.cpp.obj
 
 src/assistants.i: src/assistants.cpp.i
@@ -237,7 +237,7 @@ src/assistants.i: src/assistants.cpp.i
 
 # target to preprocess a source file
 src/assistants.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/assistants.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/assistants.cpp.i
 .PHONY : src/assistants.cpp.i
 
 src/assistants.s: src/assistants.cpp.s
@@ -246,7 +246,7 @@ src/assistants.s: src/assistants.cpp.s
 
 # target to generate assembly for a file
 src/assistants.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/assistants.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/assistants.cpp.s
 .PHONY : src/assistants.cpp.s
 
 src/chunkStruct.obj: src/chunkStruct.cpp.obj
@@ -255,7 +255,7 @@ src/chunkStruct.obj: src/chunkStruct.cpp.obj
 
 # target to build an object file
 src/chunkStruct.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/chunkStruct.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/chunkStruct.cpp.obj
 .PHONY : src/chunkStruct.cpp.obj
 
 src/chunkStruct.i: src/chunkStruct.cpp.i
@@ -264,7 +264,7 @@ src/chunkStruct.i: src/chunkStruct.cpp.i
 
 # target to preprocess a source file
 src/chunkStruct.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/chunkStruct.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/chunkStruct.cpp.i
 .PHONY : src/chunkStruct.cpp.i
 
 src/chunkStruct.s: src/chunkStruct.cpp.s
@@ -273,8 +273,35 @@ src/chunkStruct.s: src/chunkStruct.cpp.s
 
 # target to generate assembly for a file
 src/chunkStruct.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/chunkStruct.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/chunkStruct.cpp.s
 .PHONY : src/chunkStruct.cpp.s
+
+src/codeGen.obj: src/codeGen.cpp.obj
+
+.PHONY : src/codeGen.obj
+
+# target to build an object file
+src/codeGen.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/codeGen.cpp.obj
+.PHONY : src/codeGen.cpp.obj
+
+src/codeGen.i: src/codeGen.cpp.i
+
+.PHONY : src/codeGen.i
+
+# target to preprocess a source file
+src/codeGen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/codeGen.cpp.i
+.PHONY : src/codeGen.cpp.i
+
+src/codeGen.s: src/codeGen.cpp.s
+
+.PHONY : src/codeGen.s
+
+# target to generate assembly for a file
+src/codeGen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/codeGen.cpp.s
+.PHONY : src/codeGen.cpp.s
 
 src/consts.obj: src/consts.cpp.obj
 
@@ -282,7 +309,7 @@ src/consts.obj: src/consts.cpp.obj
 
 # target to build an object file
 src/consts.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/consts.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/consts.cpp.obj
 .PHONY : src/consts.cpp.obj
 
 src/consts.i: src/consts.cpp.i
@@ -291,7 +318,7 @@ src/consts.i: src/consts.cpp.i
 
 # target to preprocess a source file
 src/consts.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/consts.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/consts.cpp.i
 .PHONY : src/consts.cpp.i
 
 src/consts.s: src/consts.cpp.s
@@ -300,8 +327,35 @@ src/consts.s: src/consts.cpp.s
 
 # target to generate assembly for a file
 src/consts.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/consts.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/consts.cpp.s
 .PHONY : src/consts.cpp.s
+
+src/funcInfo.obj: src/funcInfo.cpp.obj
+
+.PHONY : src/funcInfo.obj
+
+# target to build an object file
+src/funcInfo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/funcInfo.cpp.obj
+.PHONY : src/funcInfo.cpp.obj
+
+src/funcInfo.i: src/funcInfo.cpp.i
+
+.PHONY : src/funcInfo.i
+
+# target to preprocess a source file
+src/funcInfo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/funcInfo.cpp.i
+.PHONY : src/funcInfo.cpp.i
+
+src/funcInfo.s: src/funcInfo.cpp.s
+
+.PHONY : src/funcInfo.s
+
+# target to generate assembly for a file
+src/funcInfo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/funcInfo.cpp.s
+.PHONY : src/funcInfo.cpp.s
 
 src/instruction.obj: src/instruction.cpp.obj
 
@@ -309,7 +363,7 @@ src/instruction.obj: src/instruction.cpp.obj
 
 # target to build an object file
 src/instruction.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/instruction.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/instruction.cpp.obj
 .PHONY : src/instruction.cpp.obj
 
 src/instruction.i: src/instruction.cpp.i
@@ -318,7 +372,7 @@ src/instruction.i: src/instruction.cpp.i
 
 # target to preprocess a source file
 src/instruction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/instruction.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/instruction.cpp.i
 .PHONY : src/instruction.cpp.i
 
 src/instruction.s: src/instruction.cpp.s
@@ -327,8 +381,35 @@ src/instruction.s: src/instruction.cpp.s
 
 # target to generate assembly for a file
 src/instruction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/instruction.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/instruction.cpp.s
 .PHONY : src/instruction.cpp.s
+
+src/lexer.obj: src/lexer.cpp.obj
+
+.PHONY : src/lexer.obj
+
+# target to build an object file
+src/lexer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/lexer.cpp.obj
+.PHONY : src/lexer.cpp.obj
+
+src/lexer.i: src/lexer.cpp.i
+
+.PHONY : src/lexer.i
+
+# target to preprocess a source file
+src/lexer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/lexer.cpp.i
+.PHONY : src/lexer.cpp.i
+
+src/lexer.s: src/lexer.cpp.s
+
+.PHONY : src/lexer.s
+
+# target to generate assembly for a file
+src/lexer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/lexer.cpp.s
+.PHONY : src/lexer.cpp.s
 
 src/luaClosure.obj: src/luaClosure.cpp.obj
 
@@ -336,7 +417,7 @@ src/luaClosure.obj: src/luaClosure.cpp.obj
 
 # target to build an object file
 src/luaClosure.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaClosure.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaClosure.cpp.obj
 .PHONY : src/luaClosure.cpp.obj
 
 src/luaClosure.i: src/luaClosure.cpp.i
@@ -345,7 +426,7 @@ src/luaClosure.i: src/luaClosure.cpp.i
 
 # target to preprocess a source file
 src/luaClosure.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaClosure.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaClosure.cpp.i
 .PHONY : src/luaClosure.cpp.i
 
 src/luaClosure.s: src/luaClosure.cpp.s
@@ -354,7 +435,7 @@ src/luaClosure.s: src/luaClosure.cpp.s
 
 # target to generate assembly for a file
 src/luaClosure.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaClosure.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaClosure.cpp.s
 .PHONY : src/luaClosure.cpp.s
 
 src/luaMath.obj: src/luaMath.cpp.obj
@@ -363,7 +444,7 @@ src/luaMath.obj: src/luaMath.cpp.obj
 
 # target to build an object file
 src/luaMath.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaMath.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaMath.cpp.obj
 .PHONY : src/luaMath.cpp.obj
 
 src/luaMath.i: src/luaMath.cpp.i
@@ -372,7 +453,7 @@ src/luaMath.i: src/luaMath.cpp.i
 
 # target to preprocess a source file
 src/luaMath.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaMath.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaMath.cpp.i
 .PHONY : src/luaMath.cpp.i
 
 src/luaMath.s: src/luaMath.cpp.s
@@ -381,7 +462,7 @@ src/luaMath.s: src/luaMath.cpp.s
 
 # target to generate assembly for a file
 src/luaMath.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaMath.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaMath.cpp.s
 .PHONY : src/luaMath.cpp.s
 
 src/luaStack.obj: src/luaStack.cpp.obj
@@ -390,7 +471,7 @@ src/luaStack.obj: src/luaStack.cpp.obj
 
 # target to build an object file
 src/luaStack.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaStack.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaStack.cpp.obj
 .PHONY : src/luaStack.cpp.obj
 
 src/luaStack.i: src/luaStack.cpp.i
@@ -399,7 +480,7 @@ src/luaStack.i: src/luaStack.cpp.i
 
 # target to preprocess a source file
 src/luaStack.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaStack.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaStack.cpp.i
 .PHONY : src/luaStack.cpp.i
 
 src/luaStack.s: src/luaStack.cpp.s
@@ -408,7 +489,7 @@ src/luaStack.s: src/luaStack.cpp.s
 
 # target to generate assembly for a file
 src/luaStack.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaStack.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaStack.cpp.s
 .PHONY : src/luaStack.cpp.s
 
 src/luaState.obj: src/luaState.cpp.obj
@@ -417,7 +498,7 @@ src/luaState.obj: src/luaState.cpp.obj
 
 # target to build an object file
 src/luaState.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaState.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaState.cpp.obj
 .PHONY : src/luaState.cpp.obj
 
 src/luaState.i: src/luaState.cpp.i
@@ -426,7 +507,7 @@ src/luaState.i: src/luaState.cpp.i
 
 # target to preprocess a source file
 src/luaState.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaState.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaState.cpp.i
 .PHONY : src/luaState.cpp.i
 
 src/luaState.s: src/luaState.cpp.s
@@ -435,7 +516,7 @@ src/luaState.s: src/luaState.cpp.s
 
 # target to generate assembly for a file
 src/luaState.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaState.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaState.cpp.s
 .PHONY : src/luaState.cpp.s
 
 src/luaTable.obj: src/luaTable.cpp.obj
@@ -444,7 +525,7 @@ src/luaTable.obj: src/luaTable.cpp.obj
 
 # target to build an object file
 src/luaTable.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaTable.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaTable.cpp.obj
 .PHONY : src/luaTable.cpp.obj
 
 src/luaTable.i: src/luaTable.cpp.i
@@ -453,7 +534,7 @@ src/luaTable.i: src/luaTable.cpp.i
 
 # target to preprocess a source file
 src/luaTable.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaTable.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaTable.cpp.i
 .PHONY : src/luaTable.cpp.i
 
 src/luaTable.s: src/luaTable.cpp.s
@@ -462,7 +543,7 @@ src/luaTable.s: src/luaTable.cpp.s
 
 # target to generate assembly for a file
 src/luaTable.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaTable.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaTable.cpp.s
 .PHONY : src/luaTable.cpp.s
 
 src/luaVM.obj: src/luaVM.cpp.obj
@@ -471,7 +552,7 @@ src/luaVM.obj: src/luaVM.cpp.obj
 
 # target to build an object file
 src/luaVM.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaVM.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaVM.cpp.obj
 .PHONY : src/luaVM.cpp.obj
 
 src/luaVM.i: src/luaVM.cpp.i
@@ -480,7 +561,7 @@ src/luaVM.i: src/luaVM.cpp.i
 
 # target to preprocess a source file
 src/luaVM.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaVM.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaVM.cpp.i
 .PHONY : src/luaVM.cpp.i
 
 src/luaVM.s: src/luaVM.cpp.s
@@ -489,7 +570,7 @@ src/luaVM.s: src/luaVM.cpp.s
 
 # target to generate assembly for a file
 src/luaVM.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaVM.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaVM.cpp.s
 .PHONY : src/luaVM.cpp.s
 
 src/luaValue.obj: src/luaValue.cpp.obj
@@ -498,7 +579,7 @@ src/luaValue.obj: src/luaValue.cpp.obj
 
 # target to build an object file
 src/luaValue.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaValue.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaValue.cpp.obj
 .PHONY : src/luaValue.cpp.obj
 
 src/luaValue.i: src/luaValue.cpp.i
@@ -507,7 +588,7 @@ src/luaValue.i: src/luaValue.cpp.i
 
 # target to preprocess a source file
 src/luaValue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaValue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaValue.cpp.i
 .PHONY : src/luaValue.cpp.i
 
 src/luaValue.s: src/luaValue.cpp.s
@@ -516,7 +597,7 @@ src/luaValue.s: src/luaValue.cpp.s
 
 # target to generate assembly for a file
 src/luaValue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/luaValue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/luaValue.cpp.s
 .PHONY : src/luaValue.cpp.s
 
 src/nil.obj: src/nil.cpp.obj
@@ -525,7 +606,7 @@ src/nil.obj: src/nil.cpp.obj
 
 # target to build an object file
 src/nil.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/nil.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/nil.cpp.obj
 .PHONY : src/nil.cpp.obj
 
 src/nil.i: src/nil.cpp.i
@@ -534,7 +615,7 @@ src/nil.i: src/nil.cpp.i
 
 # target to preprocess a source file
 src/nil.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/nil.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/nil.cpp.i
 .PHONY : src/nil.cpp.i
 
 src/nil.s: src/nil.cpp.s
@@ -543,7 +624,7 @@ src/nil.s: src/nil.cpp.s
 
 # target to generate assembly for a file
 src/nil.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/nil.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/nil.cpp.s
 .PHONY : src/nil.cpp.s
 
 src/opcodes.obj: src/opcodes.cpp.obj
@@ -552,7 +633,7 @@ src/opcodes.obj: src/opcodes.cpp.obj
 
 # target to build an object file
 src/opcodes.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/opcodes.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/opcodes.cpp.obj
 .PHONY : src/opcodes.cpp.obj
 
 src/opcodes.i: src/opcodes.cpp.i
@@ -561,7 +642,7 @@ src/opcodes.i: src/opcodes.cpp.i
 
 # target to preprocess a source file
 src/opcodes.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/opcodes.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/opcodes.cpp.i
 .PHONY : src/opcodes.cpp.i
 
 src/opcodes.s: src/opcodes.cpp.s
@@ -570,8 +651,89 @@ src/opcodes.s: src/opcodes.cpp.s
 
 # target to generate assembly for a file
 src/opcodes.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ch10.dir\build.make CMakeFiles/ch10.dir/src/opcodes.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/opcodes.cpp.s
 .PHONY : src/opcodes.cpp.s
+
+src/optimizer.obj: src/optimizer.cpp.obj
+
+.PHONY : src/optimizer.obj
+
+# target to build an object file
+src/optimizer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/optimizer.cpp.obj
+.PHONY : src/optimizer.cpp.obj
+
+src/optimizer.i: src/optimizer.cpp.i
+
+.PHONY : src/optimizer.i
+
+# target to preprocess a source file
+src/optimizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/optimizer.cpp.i
+.PHONY : src/optimizer.cpp.i
+
+src/optimizer.s: src/optimizer.cpp.s
+
+.PHONY : src/optimizer.s
+
+# target to generate assembly for a file
+src/optimizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/optimizer.cpp.s
+.PHONY : src/optimizer.cpp.s
+
+src/parser.obj: src/parser.cpp.obj
+
+.PHONY : src/parser.obj
+
+# target to build an object file
+src/parser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/parser.cpp.obj
+.PHONY : src/parser.cpp.obj
+
+src/parser.i: src/parser.cpp.i
+
+.PHONY : src/parser.i
+
+# target to preprocess a source file
+src/parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/parser.cpp.i
+.PHONY : src/parser.cpp.i
+
+src/parser.s: src/parser.cpp.s
+
+.PHONY : src/parser.s
+
+# target to generate assembly for a file
+src/parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/parser.cpp.s
+.PHONY : src/parser.cpp.s
+
+src/token.obj: src/token.cpp.obj
+
+.PHONY : src/token.obj
+
+# target to build an object file
+src/token.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/token.cpp.obj
+.PHONY : src/token.cpp.obj
+
+src/token.i: src/token.cpp.i
+
+.PHONY : src/token.i
+
+# target to preprocess a source file
+src/token.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/token.cpp.i
+.PHONY : src/token.cpp.i
+
+src/token.s: src/token.cpp.s
+
+.PHONY : src/token.s
+
+# target to generate assembly for a file
+src/token.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LuaCompiler.dir\build.make CMakeFiles/LuaCompiler.dir/src/token.cpp.s
+.PHONY : src/token.cpp.s
 
 # Help Target
 help:
@@ -581,7 +743,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... ch10
+	@echo ... LuaCompiler
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -597,12 +759,21 @@ help:
 	@echo ... src/chunkStruct.obj
 	@echo ... src/chunkStruct.i
 	@echo ... src/chunkStruct.s
+	@echo ... src/codeGen.obj
+	@echo ... src/codeGen.i
+	@echo ... src/codeGen.s
 	@echo ... src/consts.obj
 	@echo ... src/consts.i
 	@echo ... src/consts.s
+	@echo ... src/funcInfo.obj
+	@echo ... src/funcInfo.i
+	@echo ... src/funcInfo.s
 	@echo ... src/instruction.obj
 	@echo ... src/instruction.i
 	@echo ... src/instruction.s
+	@echo ... src/lexer.obj
+	@echo ... src/lexer.i
+	@echo ... src/lexer.s
 	@echo ... src/luaClosure.obj
 	@echo ... src/luaClosure.i
 	@echo ... src/luaClosure.s
@@ -630,6 +801,15 @@ help:
 	@echo ... src/opcodes.obj
 	@echo ... src/opcodes.i
 	@echo ... src/opcodes.s
+	@echo ... src/optimizer.obj
+	@echo ... src/optimizer.i
+	@echo ... src/optimizer.s
+	@echo ... src/parser.obj
+	@echo ... src/parser.i
+	@echo ... src/parser.s
+	@echo ... src/token.obj
+	@echo ... src/token.i
+	@echo ... src/token.s
 .PHONY : help
 
 

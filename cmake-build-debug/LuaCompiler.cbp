@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="LuaCompiler"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LuaCompiler">
+				<Option output="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/LuaCompiler.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 LuaCompiler"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LuaCompiler/fast">
+				<Option output="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/LuaCompiler.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 LuaCompiler/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/main.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/ByteStreamReader.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/arith.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/assistants.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/chunkStruct.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/codeGen.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/consts.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/funcInfo.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/instruction.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/lexer.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/luaClosure.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/luaMath.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/luaStack.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/luaState.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/luaTable.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/luaVM.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/luaValue.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/nil.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/opcodes.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/optimizer.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/parser.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/src/token.cpp">
+			<Option target="LuaCompiler"/>
+		</Unit>
+		<Unit filename="E:/C&amp;C++Proj/LuaCompiler/ch17_ch12_integral/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

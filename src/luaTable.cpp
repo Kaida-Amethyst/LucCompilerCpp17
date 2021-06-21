@@ -5,22 +5,36 @@
 #include "luaTable.h"
 #include "luaMath.h"
 #include <iostream>
+#include "luaValue.h"
 
-luaTable::luaTable(int nArr, int nRec) {
+static luaValue luaNIL{nil};
+
+
+luaTable::luaTable(int nArr, int nRec):metatable{nullptr}, keys{nullptr},changed{false} {
     arr = nArr > 0? new std::vector<luaValue>(nArr):new std::vector<luaValue>();
     _map = new std::unordered_map<luaValue, luaValue>();
 }
 
-luaTable::luaTable(const luaTable & other){
+luaTable::luaTable(const luaTable & other):metatable{nullptr}, keys{nullptr},changed{false}{
     arr = new std::vector<luaValue>(*(other.arr));
     _map = new std::unordered_map<luaValue, luaValue>(*(other._map));
+    if (other.metatable == nullptr){
+        metatable = nullptr;
+    }else{
+        metatable = new luaTable(*other.metatable);
+    }
 }
 
-luaTable::luaTable(luaTable && other){
+luaTable::luaTable(luaTable && other):metatable{nullptr}, keys{nullptr},changed{false}{
 //    arr.reset(); _map.reset();
     delete arr; delete _map;
     arr = new std::vector<luaValue>(*other.arr);
     _map = new std::unordered_map<luaValue, luaValue>(*other._map);
+    if (other.metatable == nullptr){
+        metatable = nullptr;
+    }else{
+        metatable = new luaTable(*other.metatable);
+    }
 }
 
 luaTable& luaTable::operator=(const luaTable & other){
@@ -39,6 +53,15 @@ bool operator==(const luaTable & l, const luaTable & r){
     return &l == &r;
 }
 
+//func (self *luaTable) get(key luaValue) luaValue {
+//key = _floatToInteger(key)
+//if idx, ok := key.(int64); ok {
+//if idx >= 1 && idx <= int64(len(self.arr)) {
+//return self.arr[idx-1]
+//}
+//}
+//return self._map[key]
+//}
 
 luaValue & luaTable::get(const luaValue & key) const {
     if (key.type() == luaValue::Int){
@@ -49,9 +72,16 @@ luaValue & luaTable::get(const luaValue & key) const {
             if (idx >= 1 && idx <= arr->size()) return arr->at(idx-1);
         }
     }
-    return _map->at(key);
-
+    if (_map != nullptr && !_map->empty() && _map->find(key) != _map->end()){
+        return _map->at(key);
+    } else{
+        return luaNIL;
+//        std::cerr <<  std::boolalpha << "Didn't find key = " << key << std::endl;
+//        std::cerr << "_map == nullptr = " << (_map == nullptr) << " _map->empty() = " << _map->empty()<< std::endl;
+//        abort();
+    }
 }
+
 
 luaValue luaTable::__floatToInteger(const luaValue &key) const {
     if (key.type() == luaValue::Float){
@@ -87,6 +117,24 @@ void luaTable::__expandArray() {
     }
 }
 
+void luaTable::initKeys() {
+    this->keys = new std::unordered_map<luaValue, luaValue>();
+    luaValue key;
+    for(auto i=0;i<this->arr->size();i++){
+        auto & v = this->arr->at(i);
+        if (!(v == nil)){
+            this->keys->insert(std::pair{key, luaValue(i+1)});
+            key = luaValue(i+1);
+        }
+    }
+    for(auto & [k, v] : *this->_map){
+        if ( !(v == nil) ){
+            this->keys->insert(std::pair{key, k});
+            key = k;
+        }
+    }
+}
+
 
 void luaTable::put(luaValue K, luaValue V) {
     switch (K.type()) {
@@ -98,6 +146,11 @@ void luaTable::put(luaValue K, luaValue V) {
                 std::cerr << "Trying to insert an index whihc is NaN!" << std::endl;
                 abort();
             }
+    }
+    this->changed = true;
+
+    switch (K.type()) {
+        case luaValue::Float:
             if (auto[i, ok] = FloatToInteger(K.get<luaValue::Float>()); ok){
                 K = i;
             }
@@ -131,5 +184,17 @@ void luaTable::put(luaValue K, luaValue V) {
             }else{
                 _map->erase(K);
             }
+    }
+}
+
+luaValue luaTable::nextKey(const luaValue & key){
+    if (this->keys == nullptr || (key == nil && this->changed)){
+        this->initKeys();
+        this->changed = false;
+    }
+    if (this->keys->find(key) != this->keys->end()){
+        return this->keys->at(key);
+    }else{
+        return luaValue(nil);
     }
 }

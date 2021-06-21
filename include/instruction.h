@@ -113,6 +113,9 @@ void setUpVal(Instruction & i, LuaVM & vm);
 void getTabUp(Instruction & i, LuaVM & vm);
 void setTabUp(Instruction & i, LuaVM & vm);
 
+void tForCall(Instruction & i, LuaVM & vm);
+void tForLoop(Instruction & i, LuaVM & vm);
+
 
 
 

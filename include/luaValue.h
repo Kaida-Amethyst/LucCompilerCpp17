@@ -15,8 +15,9 @@
 
 
 class luaTable;
+class LuaVM;
 
-extern luaValue lnil;
+
 
 class luaValue{
 private:
@@ -57,6 +58,9 @@ public:
     inline bool isNil() const noexcept{
         return value.index() == luaValue::Nil;
     }
+
+    void setMetaTable(luaTable * mt, LuaVM & vm);
+    luaTable * getMetaTable(LuaVM & vm);
 
     size_t index() const noexcept;
     size_t type() const noexcept;
@@ -126,6 +130,13 @@ bool operator==(const bool & b,          const luaValue & l);
 bool operator==(const std::string & str, const luaValue & l);
 bool operator==(const luaTable & t,      const luaValue & l);
 
+std::pair<luaValue, bool> callMetaMethod(const luaValue & a, const luaValue & b,
+                                         const std::string & mmName, LuaVM & vm);
+
+luaValue getMetafield(luaValue val, const std::string & fieldName, LuaVM & vm);
+
+
 std::ostream& operator<<(std::ostream & os, luaValue & v);
+std::ostream& operator<<(std::ostream & os, const luaValue & v);
 
 #endif //LUACOMPILER_RENEW_LUAVALUE_H

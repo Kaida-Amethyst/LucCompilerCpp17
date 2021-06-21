@@ -148,7 +148,9 @@ void add (Instruction & i, LuaVM & vm)  { __binaryArith(i, vm, LUA_OPADD ); };  
 void sub (Instruction & i, LuaVM & vm)  { __binaryArith(i, vm, LUA_OPSUB ); };  // -
 void mul (Instruction & i, LuaVM & vm)  { __binaryArith(i, vm, LUA_OPMUL ); };  // *
 void mod (Instruction & i, LuaVM & vm)  { __binaryArith(i, vm, LUA_OPMOD ); }; // %
-void Pow (Instruction & i, LuaVM & vm)  { __binaryArith(i, vm, LUA_OPPOW ); }; // ^
+void Pow (Instruction & i, LuaVM & vm)  {
+    __binaryArith(i, vm, LUA_OPPOW );
+}; // ^
 void Div (Instruction & i, LuaVM & vm)  { __binaryArith(i, vm, LUA_OPDIV ); }; // /
 void idiv(Instruction & i, LuaVM & vm)  { __binaryArith(i, vm, LUA_OPIDIV); }; // //
 void band(Instruction & i, LuaVM & vm)  { __binaryArith(i, vm, LUA_OPBAND); }; // &
@@ -434,4 +436,22 @@ void setTabUp(Instruction & i, LuaVM & vm){
 //    }
     std::cerr << std::endl;
     vm.SetTable(LuaUpvalueIndex(a));
+}
+
+void tForCall(Instruction & i, LuaVM & vm){
+    auto [a, _, c] = i.ABC();
+    a ++ ;
+    _pushFuncAndArgs(a, 3, vm);
+    vm.Call(2, c);
+    _popResults(a+3, c+1, vm);
+}
+
+
+void tForLoop(Instruction & i, LuaVM & vm){
+    auto [a, sBx] = i.AsBx();
+    a ++;
+    if (!vm.IsNil(a+1)){
+        vm.Copy(a+1, a);
+        vm.AddPC(sBx);
+    }
 }

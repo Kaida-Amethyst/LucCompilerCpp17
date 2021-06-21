@@ -233,12 +233,12 @@ luaValue luaState::__arith(luaValue &a, luaValue &b, Operator &op) {
         if (op.IntegerFunc != nullptr){
             if (a.type() == luaValue::Int && b.type() == luaValue::Int){
                 return luaValue(op.IntegerFunc(a.get<luaValue::Int>(), b.get<luaValue::Int>()));
-            }else{
-                auto [x , a_ok] = asf::convertToFloat(a);
-                if (a_ok){
-                    auto [y, b_ok] = asf::convertToFloat(b);
-                    return luaValue(op.FloatFunc(x, y));
-                }
+            }
+        }else{
+            auto [x , a_ok] = asf::convertToFloat(a);
+            if (a_ok){
+                auto [y, b_ok] = asf::convertToFloat(b);
+                return luaValue(op.FloatFunc(x, y));
             }
         }
     }
@@ -346,13 +346,13 @@ void luaState::Arith(ArithOp op) {
         a = b;
     }
     auto opera = Operators[op];
-    auto result = __arith(a, b, opera);
-    if (result.type() != luaValue::Nil){
+    if (auto result = __arith(a, b, opera); result.type() != luaValue::Nil){
         stack->push(result);
+        return ;
     }else{
-        std::cerr << "Arithmetic error! Location: lua_state::Arith" << std::endl;
-        abort();
+        std::cerr << "arithmetic error! Location : luaState::Arith" << std::endl;
     }
+
 }
 
 
@@ -538,5 +538,6 @@ void luaState::Register(const std::string & name, ExFunction f){
     this->pushExFunction(std::move(f));
     this->SetGlobal(name);
 }
+
 
 

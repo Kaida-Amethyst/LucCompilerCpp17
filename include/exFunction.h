@@ -7,8 +7,9 @@
 
 #include <functional>
 class luaState;
+class LuaVM;
 
-using ExFunction = std::function<int(luaState *)>;
+using ExFunction = std::function<int(LuaVM *)>;
 
 
 #endif //CH09_EXFUNCTION_H

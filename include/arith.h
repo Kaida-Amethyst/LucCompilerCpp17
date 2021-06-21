@@ -11,6 +11,7 @@
 #include <functional>
 #include <vector>
 #include <iostream>
+#include <string>
 
 namespace arith{
     int64_t iadd (int64_t a, int64_t b);
@@ -36,6 +37,7 @@ namespace arith{
 };
 
 struct Operator{
+    std::string metamethod;
     std::function<int64_t (int64_t, int64_t)> IntegerFunc;
     std::function<double  (double,   double)> FloatFunc;
 };

@@ -22,9 +22,9 @@ public:
 
     int pc;
     luaValue __arith(luaValue &a, luaValue &b, Operator &op);
-    bool __eq(const luaValue &a, const luaValue &b) const;
-    bool __lt(const luaValue &a, const luaValue &b) const;
-    bool __le(const luaValue &a, const luaValue &b) const;
+    virtual bool __eq(const luaValue &a, const luaValue &b) const;
+    virtual bool __lt(const luaValue &a, const luaValue &b) const;
+    virtual bool __le(const luaValue &a, const luaValue &b) const;
     LuaType __getTable(const luaValue& t, const luaValue& k);
     void __setTable(const luaValue& t, luaValue k, luaValue v);
 
@@ -63,20 +63,20 @@ public:
     void PushInteger(int64_t n);
     void PushNumber(double n);
     void PushString(const std::string& s);
-    void Arith(ArithOp op);
-    bool Compare(int idx1, int idx2, CompareOp op);
-    void Len(int idx);
-    void Concat(int n);
+    virtual void Arith(ArithOp op);
+    virtual bool Compare(int idx1, int idx2, CompareOp op);
+    virtual void Len(int idx);
+    virtual void Concat(int n);
     void NewTable();
     void CreateTable(int nArr, int nRec);
-    LuaType GetTable(int idx);
+    virtual LuaType GetTable(int idx);
 
-    LuaType GetField(int idx, std::string k);
-    LuaType GetI(int idx, int64_t i);
-    void SetTable(int idx);
+    virtual LuaType GetField(int idx, std::string k);
+    virtual LuaType GetI(int idx, int64_t i);
+    virtual void SetTable(int idx);
 
-    void SetField(int idx, const std::string& k);
-    void SetI(int  idx, int64_t i);
+    virtual void SetField(int idx, const std::string& k);
+    virtual void SetI(int  idx, int64_t i);
 
     void pushLuaStack(luaStack * stack);
     void popLuaStack();
@@ -92,7 +92,9 @@ public:
     void Register(const std::string & name, ExFunction f);
 
 
+
     friend class luaStack;
+    friend class luaValue;
 };
 
 
