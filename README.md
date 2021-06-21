@@ -1,3 +1,26 @@
 # LucCompilerCpp17
 
-自己用C++17写的lua编译器，目前已经完成了词法分析，语法分析，字节码解析的部分。由于字节码生成的部分以及标准库部分尚未完成，因此该项目暂时还无法使用。后面会陆续完善字节码生成以及为其设计标准库（至少需要print函数）。
+自己用C++17写的lua编译器，目前已经完成了词法分析，语法分析，字节码生成以及解析的部分。
+
+目前此编译器还不够完善，可能仍然存在许多暗病。未来会逐步修复这些暗病，并且会进一步完善文档。
+
+## 查看文档
+
+查阅documents文件夹下。
+
+## 运行lua代码
+
+目前的办法（暂时）：需要修改main函数
+
+```c++
+    std::ifstream file;
+    file.open("../luafiles/hello_world.lua", std::ios::in);
+    std::istreambuf_iterator<char> beg(file), end;
+    std::string st{beg, end};
+```
+
+填入lua代码文件的位置即可。
+
+## 编译
+
+使用cmake即可。
