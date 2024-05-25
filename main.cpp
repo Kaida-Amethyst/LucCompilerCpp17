@@ -83,9 +83,16 @@ int iPairs(LuaVM * vm){
 
 
 
-int main() {
+int main(int argc, char* argv[]) {
+    if (argc < 2) {
+        std::cout << "Error! Please provide lua file!\n";
+    }
     std::ifstream file;
-    file.open("../luafiles/hello_world.lua", std::ios::in);
+    file.open(argv[1], std::ios::in);
+    if (!file) {
+        std::cerr << "Error: cannot open file" << argv[1] << "\n";
+        return 1;
+    }
     std::istreambuf_iterator<char> beg(file), end;
     std::string st{beg, end};
 
@@ -97,8 +104,5 @@ int main() {
 
     ls->Load(st, "test");
     ls->Call(0, 0);
-
-//    Lexer lexer{"codes", st};
-//    parseBlock(lexer);
     return 0;
 }
